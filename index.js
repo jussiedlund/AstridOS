@@ -1,18 +1,8 @@
-const { LedMatrix, GpioMapping } = require('rpi-led-matrix');
+var LedMatrix = require("easybotics-rpi-rgb-led-matrix");
 
-const matrix = new LedMatrix(
-  {
-    rows: 32,
-    cols: 64,
-    chainLength: 1,
-    hardwareMapping: GpioMapping.AdafruitHat, // Change if needed
-  },
-  {
-    brightness: 100,
-    pwmLsbNanoseconds: 130,
-  }
-);
-
-matrix.clear().drawText(5, 10, "Hello, AstridOS!");
-
-setTimeout(() => matrix.clear(), 5000); // Clear after 5 seconds
+//init a 16 rows  by 16 cols led matrix 
+//default hardware mapping is 'regular', could be 'adafruit-hat-pwm' ect 
+var matrix = new LedMatrix(16, 16 );
+matrix.fill(255, 50, 100);
+matrix.setPixel(0, 0, 0, 50, 255);
+matrix.update();
