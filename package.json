@@ -1,12 +1,29 @@
 {
-  "name": "astrid-os-2",
-  "version": "1.0.0",
+  "name": "astridos",
+  "version": "0.1.0",
+  "description": "AstridOS - A smart display OS for LED matrices, built with Node.js.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js",
+    "simulate": "node simulator.js"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": ""
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/astridos.git"
+  },
+  "keywords": [
+    "LED",
+    "HUB75",
+    "Node.js",
+    "smart-display",
+    "AstridOS"
+  ],
+  "author": "Your Name <your.email@example.com>",
+  "license": "MIT",
+  "dependencies": {
+    "rpi-led-matrix": "^0.2.0",
+    "canvas": "^2.9.3",
+    "express": "^4.18.2",
+    "socket.io": "^4.6.1"
+  }
 }
